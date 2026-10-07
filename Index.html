@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Kau ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+    color:white;
+    text-align:center;
+    background:#12001f;
+}
+
+/* BACKGROUND */
+
+section{
+    min-height:100vh;
+    padding:50px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.home{
+    background:
+    radial-gradient(circle at 20% 20%,#ff4f81,transparent 30%),
+    radial-gradient(circle at 80% 80%,#7b2ff7,transparent 35%),
+    linear-gradient(135deg,#18002b,#35005c);
+}
+
+.message{
+    background:
+    radial-gradient(circle at 80% 20%,#ff4f81,transparent 30%),
+    linear-gradient(135deg,#4b0082,#15002b);
+}
+
+.surprise{
+    background:
+    radial-gradient(circle,#302060,#080010);
+}
+
+/* TEXT */
+
+h1{
+    font-size:45px;
+    margin:15px 0;
+    text-shadow:0 0 20px rgba(255,255,255,.5);
+}
+
+h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.name{
+    color:#ffe600;
+    text-shadow:
+    0 0 10px #fff,
+    0 0 25px #ffea00;
+}
+
+.subtitle{
+    font-size:19px;
+}
+
+/* ANIMATED GIRL */
+
+.character{
+    position:relative;
+    width:190px;
+    height:290px;
+    animation:float 3s ease-in-out infinite;
+    filter:drop-shadow(0 15px 20px rgba(0,0,0,.35));
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0) rotate(-1deg);
+    }
+    50%{
+        transform:translateY(-18px) rotate(1deg);
+    }
+}
+
+/* Hair */
+
+.hair{
+    position:absolute;
+    width:125px;
+    height:145px;
+    background:linear-gradient(135deg,#21100e,#5b2925);
+    border-radius:65px 65px 45px 45px;
+    left:32px;
+    top:5px;
+    box-shadow:0 5px 20px rgba(0,0,0,.4);
+}
+
+/* Face */
+
+.face{
+    position:absolute;
+    width:92px;
+    height:108px;
+    background:linear-gradient(135deg,#ffe0c7,#ffc1a3);
+    border-radius:48%;
+    left:48px;
+    top:32px;
+    z-index:2;
+}
+
+/* Eyes */
+
+.eye{
+    position:absolute;
+    width:11px;
+    height:15px;
+    background:#20151a;
+    border-radius:50%;
+    top:70px;
+    z-index:3;
+    animation:blink 4s infinite;
+}
+
+.eye.left{
+    left:68px;
+}
+
+.eye.right{
+    left:108px;
+}
+
+@keyframes blink{
+    0%,94%,100%{
+        transform:scaleY(1);
+    }
+    96%{
+        transform:scaleY(.1);
+    }
+}
+
+/* Smile */
+
+.mouth{
+    position:absolute;
+    width:30px;
+    height:17px;
+    border-bottom:4px solid #e94f64;
+    border-radius:50%;
+    left:79px;
+    top:103px;
+    z-index:3;
+}
+
+/* Body */
+
+.body{
+    position:absolute;
+    width:115px;
+    height:105px;
+    background:linear-gradient(135deg,#ff3f7f,#ff79a8);
+    border-radius:45px 45px 20px 20px;
+    left:38px;
+    top:145px;
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
+
+/* Arms */
+
+.arm{
+    position:absolute;
+    width:21px;
+    height:78px;
+    background:#ffd0b5;
+    border-radius:20px;
+    top:150px;
+    z-index:4;
+}
+
+.arm.left{
+    left:20px;
+    transform:rotate(28deg);
+    transform-origin:top;
+    animation:wave 2s ease-in-out infinite;
+}
+
+.arm.right{
+    right:20px;
+    transform:rotate(-25deg);
+}
+
+@keyframes wave{
+    0%,100%{
+        transform:rotate(28deg);
+    }
+    50%{
+        transform:rotate(48deg);
+    }
+}
+
+/* CAKE */
+
+.cake{
+    font-size:75px;
+    margin-top:5px;
+    animation:cakeFloat 2s ease-in-out infinite;
+    filter:drop-shadow(0 0 15px #ffb6d9);
+}
+
+@keyframes cakeFloat{
+    0%,100%{
+        transform:translateY(0) scale(1);
+    }
+    50%{
+        transform:translateY(-10px) scale(1.08);
+    }
+}
+
+/* BUTTON */
+
+button{
+    border:none;
+    padding:16px 30px;
+    border-radius:40px;
+    background:linear-gradient(135deg,#fff,#ffe1ee);
+    color:#e52c70;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:25px;
+    box-shadow:
+    0 0 10px rgba(255,255,255,.6),
+    0 8px 25px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 30px white;
+}
+
+button:active{
+    transform:scale(.95);
+}
+
+/* MESSAGE CARD */
+
+.card{
+    max-width:620px;
+    padding:35px;
+    border-radius:30px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.25);
+    backdrop-filter:blur(15px);
+    box-shadow:
+    0 15px 50px rgba(0,0,0,.35),
+    inset 0 0 30px rgba(255,255,255,.05);
+}
+
+.card h2{
+    color:#ffd6e7;
+}
+
+.card p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* GIFT */
+
+.gift{
+    font-size:115px;
+    animation:gift 1.5s ease-in-out infinite;
+    filter:drop-shadow(0 0 25px #ff69b4);
+}
+
+@keyframes gift{
+    0%,100%{
+        transform:rotate(0) translateY(0);
+    }
+    25%{
+        transform:rotate(-8deg) translateY(-5px);
+    }
+    75%{
+        transform:rotate(8deg) translateY(-5px);
+    }
+}
+
+/* FINAL */
+
+#finalMessage{
+    display:none;
+    max-width:650px;
+    animation:reveal 1.2s cubic-bezier(.17,.67,.3,1.3);
+}
+
+@keyframes reveal{
+    from{
+        opacity:0;
+        transform:scale(.3) rotate(-5deg);
+    }
+    to{
+        opacity:1;
+        transform:scale(1) rotate(0);
+    }
+}
+
+.finalEmoji{
+    font-size:75px;
+    animation:spin 2s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform:rotate(0);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+/* HEARTS */
+
+.heart{
+    position:fixed;
+    bottom:-40px;
+    pointer-events:none;
+    z-index:50;
+    animation:heartUp linear forwards;
+}
+
+@keyframes heartUp{
+    0%{
+        transform:translateY(0) scale(.5) rotate(0);
+        opacity:0;
+    }
+    10%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-110vh) scale(1.3) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* STARS */
+
+.star{
+    position:fixed;
+    color:white;
+    pointer-events:none;
+    animation:twinkle 2s ease-in-out infinite;
+}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:.2;
+        transform:scale(.5);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1.4);
+    }
+}
+
+/* CONFETTI */
+
+.confetti{
+    position:fixed;
+    width:9px;
+    height:14px;
+    top:-20px;
+    z-index:100;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    h1{
+        font-size:34px;
+    }
+
+    h2{
+        font-size:27px;
+    }
+
+    .character{
+        transform:scale(.9);
+    }
+
+    .card{
+        padding:25px 20px;
+    }
+
+    .card p{
+        font-size:16px;
+    }
+}
+
+footer{
+    background:#080008;
+    padding:22px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HOME -->
+
+<section class="home">
+
+<div class="character">
+
+<div class="hair"></div>
+
+<div class="face"></div>
+
+<div class="eye left"></div>
+<div class="eye right"></div>
+
+<div class="mouth"></div>
+
+<div class="body"></div>
+
+<div class="arm left"></div>
+<div class="arm right"></div>
+
+</div>
+
+<div class="cake">🎂</div>
+
+<h1>
+Happy Birthday
+<span class="name">Kau</span>! 🎉
+</h1>
+
+<p class="subtitle">
+Today is your special day ❤️
+</p>
+
+<button onclick="openMessage()">
+Open Your Surprise 🎁
+</button>
+
+</section>
+
+
+<!-- MESSAGE -->
+
+<section class="message">
+
+<div class="card">
+
+<h2>💌 A Special Message</h2>
+
+<p>
+
+Happy Birthday, <b>Kau</b>! ❤️
+
+<br><br>
+
+May your special day be filled with
+happiness, laughter and beautiful memories.
+
+<br><br>
+
+May all your dreams come true
+and may this new year of your life
+bring you lots of happiness and success.
+
+<br><br>
+
+Keep smiling. Keep shining. ✨
+
+<br><br>
+
+Once again...
+
+<br><br>
+
+<b>HAPPY BIRTHDAY KAU! 🎂🎉❤️</b>
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- SURPRISE -->
+
+<section class="surprise">
+
+<div class="gift">
+🎁
+</div>
+
+<h2>
+One Last Surprise!
+</h2>
+
+<button onclick="openGift()">
+Open The Gift ❤️
+</button>
+
+<div id="finalMessage">
+
+<div class="finalEmoji">
+🎉🎂💖
+</div>
+
+<h1>
+HAPPY BIRTHDAY!
+</h1>
+
+<h2>
+Kau ❤️
+</h2>
+
+<p style="font-size:20px;line-height:1.7;">
+
+You are a very special person. ❤️
+
+<br><br>
+
+I hope this year brings you
+happiness, success and
+unforgettable memories.
+
+<br><br>
+
+Keep smiling and enjoy your day! ✨
+
+<br><br>
+
+🎂 HAPPY BIRTHDAY KAU 🎂
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+Made with ❤️ specially for Kau
+</footer>
+
+
+<script>
+
+/* MESSAGE */
+
+function openMessage(){
+
+document.querySelector(".message")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+createHearts(20);
+}
+
+
+/* GIFT */
+
+function openGift(){
+
+document.getElementById("finalMessage")
+.style.display="block";
+
+createHearts(60);
+
+createConfetti(120);
+
+}
+
+
+/* HEARTS */
+
+function createHearts(number){
+
+for(let i=0;i<number;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+const emojis=[
+"❤️",
+"💖",
+"💕",
+"💗",
+"💓",
+"💞",
+"✨"
+];
+
+heart.innerHTML=
+emojis[Math.floor(Math.random()*emojis.length)];
+
+heart.style.left=
+Math.random()*100+"%";
+
+heart.style.fontSize=
+(15+Math.random()*30)+"px";
+
+heart.style.animationDuration=
+(3+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+}
+
+}
+
+
+/* CONFETTI */
+
+function createConfetti(number){
+
+for(let i=0;i<number;i++){
+
+let c=document.createElement("div");
+
+c.className="confetti";
+
+c.style.left=
+Math.random()*100+"%";
+
+c.style.background=
+randomColor();
+
+c.style.animationDuration=
+(2+Math.random()*3)+"s";
+
+document.body.appendChild(c);
+
+setTimeout(()=>{
+c.remove();
+},6000);
+
+}
+
+}
+
+
+/* COLOR */
+
+function randomColor(){
+
+const colors=[
+"#ff4f81",
+"#ffd700",
+"#00e5ff",
+"#7cff00",
+"#ffffff",
+"#ff7b00",
+"#c77dff"
+];
+
+return colors[
+Math.floor(Math.random()*colors.length)
+];
+
+}
+
+
+/* STARS */
+
+function createStars(){
+
+for(let i=0;i<35;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+
+star.innerHTML="✦";
+
+star.style.left=
+Math.random()*100+"%";
+
+star.style.top=
+Math.random()*100+"%";
+
+star.style.fontSize=
+(8+Math.random()*15)+"px";
+
+star.style.animationDelay=
+Math.random()*2+"s";
+
+document.body.appendChild(star);
+
+}
+
+}
+
+createStars();
+
+
+/* AUTO HEARTS */
+
+setInterval(()=>{
+
+createHearts(1);
+
+},1200);
+
+</script>
+
+</body>
+</html>
